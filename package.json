@@ -1,0 +1,23 @@
+{
+  "name": "ledger-user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lefra": "file:/Users/radzserg/projects/lefra-1.0.0.tgz",
+    "slonik": "^37.2.0",
+    "slonik-interceptor-field-name-transformation": "^1.6.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3"
+  }
+}
