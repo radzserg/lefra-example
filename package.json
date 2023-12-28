@@ -6,6 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "tsx ./src/index.ts",
+    "lint:eslint": "eslint .",
+    "lint:format": "eslint --fix $FILES",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
   },

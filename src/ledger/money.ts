@@ -1,4 +1,4 @@
-import { Unit } from "lefra";
+import { Unit } from 'lefra';
 
 export const usd = (amount: number | string) => {
   return new Unit(amount, 'USD', 2);
