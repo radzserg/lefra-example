@@ -24,7 +24,7 @@ export class OwnerFundsDepositOperation implements ILedgerOperation {
     const account = ledgerAccountsRefBuilder(FirecncPlatformUsdLedger);
     const entries = new TransactionDoubleEntries([
       doubleEntry(
-        debit(account('CURRENT_ASSETS'), amount),
+        debit(account('CURRENT_ASSETS_STRIPE_PLATFORM_USA'), amount),
         credit(account('OWNER_FUNDS'), amount),
         "Inject additional funds into the company's current assets from the owner's funds",
       ),

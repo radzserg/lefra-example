@@ -90,12 +90,24 @@ const firecncAccountTypes: InputLedgerAccountTypeWithParent[] = [
   },
   {
     description:
-      "This account reflects the amount the company owes to the apartment owners. It represents the company's liability to pay owners for the bookings made on their properties.",
+      "This account represents the company's liability to pay apartment owners for bookings made on their properties. " +
+      'It reflects the outstanding amount the company owes to property owners for confirmed bookings',
     isEntityLedgerAccount: true,
     name: 'Owners Accounts Payable',
     normalBalance: 'CREDIT' as NormalBalance,
     parentLedgerAccountTypeSlug: 'LIABILITIES',
     slug: 'OWNERS_ACCOUNTS_PAYABLES',
+  },
+  {
+    description:
+      'This account reflects the amount the company owes to apartment owners after a booking is confirmed and the ' +
+      'funds are held in escrow. It represents the locked amount that the company owes to property owners until the ' +
+      'booking is completed and funds are released.',
+    isEntityLedgerAccount: true,
+    name: 'Owners Accounts Payable',
+    normalBalance: 'CREDIT' as NormalBalance,
+    parentLedgerAccountTypeSlug: 'LIABILITIES',
+    slug: 'OWNERS_ACCOUNTS_PAYABLES_LOCKED',
   },
   {
     description:
@@ -191,9 +203,9 @@ const accounts: InputLedgerAccountWithParent[] = [
     slug: 'OWNER_FUNDS',
   },
   {
-    description: 'Current Assets Account',
-    ledgerAccountTypeSlug: 'ASSETS',
-    slug: 'CURRENT_ASSETS',
+    description: 'Current Assets Platform Account',
+    ledgerAccountTypeSlug: 'CURRENT_ASSETS',
+    slug: 'CURRENT_ASSETS_STRIPE_PLATFORM_USA',
   },
   {
     description: 'Stripe Fees Expense Account',
