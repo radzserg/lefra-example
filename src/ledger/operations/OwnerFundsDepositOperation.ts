@@ -22,15 +22,13 @@ export class OwnerFundsDepositOperation implements ILedgerOperation {
     const { adminUserId, amount } = this.payload;
 
     const account = ledgerAccountsRefBuilder(FirecncPlatformUsdLedger);
-    const entries = TransactionDoubleEntries.empty<'USD'>();
-
-    entries.push(
+    const entries = new TransactionDoubleEntries([
       doubleEntry(
         debit(account('CURRENT_ASSETS'), amount),
         credit(account('OWNER_FUNDS'), amount),
-        "Records the injection of additional funds into the company's current assets from the owner's equity",
+        "Inject additional funds into the company's current assets from the owner's funds",
       ),
-    );
+    ]);
 
     return new Transaction(
       entries,
