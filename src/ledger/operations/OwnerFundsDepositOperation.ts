@@ -10,13 +10,13 @@ import {
   TransactionDoubleEntries,
 } from 'lefra';
 
-type ProjectStartedOperationData = {
+type OperationPayload = {
   adminUserId: number;
   amount: USD;
 };
 
 export class OwnerFundsDepositOperation implements ILedgerOperation {
-  public constructor(private readonly payload: ProjectStartedOperationData) {}
+  public constructor(private readonly payload: OperationPayload) {}
 
   public async createTransaction() {
     const { adminUserId, amount } = this.payload;
