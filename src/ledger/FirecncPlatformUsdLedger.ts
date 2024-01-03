@@ -2,7 +2,7 @@ export const FirecncPlatformUsdLedger = {
   currencyCode: 'USD',
   entityAccountTypes: [
     'OWNERS_ACCOUNTS_PAYABLES',
-    'OWNERS_ACCOUNTS_PAYABLES_LOCKED'
+    'OWNERS_ACCOUNTS_PAYABLES_LOCKED',
   ] as const,
   slug: 'FIRECNC_PLATFORM_USD',
   systemAccounts: [
@@ -14,6 +14,6 @@ export const FirecncPlatformUsdLedger = {
     'BOOKINGS_PROFIT',
     'REFUNDS',
     'STRIPE_PAY_IN_FEES',
-    'BOOKING_HOLDINGS'
+    'BOOKING_HOLDINGS',
   ] as const,
 };
