@@ -1,6 +1,7 @@
 /*  eslint-disable no-console */
 
 import { IssueBonusPoints } from './ledger/bonusPointsOperations/IssueBonusPointsOperations.js';
+import { ShareBonusPointsOperation } from './ledger/bonusPointsOperations/ShareBonusPointsOperation.js';
 import { FirecncBonusPointsLedger } from './ledger/FirecncBonusPointsLedger.js';
 import { FirecncPlatformUsdLedger } from './ledger/FirecncPlatformUsdLedger.js';
 import { points } from './ledger/points.js';
@@ -41,6 +42,22 @@ setTimeout(async () => {
       account('USER_BONUS_POINTS', 23),
     );
     console.log('USER_BONUS_POINTS:23', balance.format());
+
+    await ledger.record(
+      new ShareBonusPointsOperation({
+        amount: points(20),
+        providerUserId: 23,
+        receiverUserId: 42,
+      }),
+    );
+    const providerBalance = await ledger.fetchAccountBalance(
+      account('USER_BONUS_POINTS', 23),
+    );
+    const receiverBalance = await ledger.fetchAccountBalance(
+      account('USER_BONUS_POINTS', 42),
+    );
+    console.log('Provider balance', providerBalance.format());
+    console.log('Receiver balance', receiverBalance.format());
   } catch (error) {
     console.error(error);
   } finally {
