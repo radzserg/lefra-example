@@ -244,7 +244,7 @@ const accounts: InputLedgerAccountWithParent[] = [
   },
 ];
 
-export const createLedger = async (storage: LedgerStorage) => {
+export const createUsdLedger = async (storage: LedgerStorage) => {
   const usdCurrency = await storage.insertCurrency({
     code: 'USD',
     minimumFractionDigits: 2,

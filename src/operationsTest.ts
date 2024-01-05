@@ -2,9 +2,9 @@
 
 import { FirecncPlatformUsdLedger } from './ledger/FirecncPlatformUsdLedger.js';
 import { usd } from './ledger/money.js';
-import { OwnerFundsDepositOperation } from './ledger/operations/OwnerFundsDepositOperation.js';
-import { TenantMakesBookingOperation } from './ledger/operations/TenantMakesBookingOperation.js';
-import { TenantMakesBookingOperationWithUpfront } from './ledger/operations/TenantMakesBookingWithUpfrontOperation.js';
+import { OwnerFundsDepositOperation } from './ledger/platformUsdOperations/OwnerFundsDepositOperation.js';
+import { TenantMakesBookingOperation } from './ledger/platformUsdOperations/TenantMakesBookingOperation.js';
+import { TenantMakesBookingOperationWithUpfront } from './ledger/platformUsdOperations/TenantMakesBookingWithUpfrontOperation.js';
 import {
   Ledger,
   ledgerAccountsRefBuilder,
