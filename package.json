@@ -5,8 +5,9 @@
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsc",
-    "create-ledger": "tsx ./src/createLedger.ts",
-    "test-operations": "tsx ./src/operationsTest.ts",
+    "create-ledgers": "tsx ./src/createLedgers.ts",
+    "test-usd-operations": "tsx ./src/usdOperationsTest.ts",
+    "test-bonus-points-operations": "tsx ./src/bonusPointsOperationsTest.ts",
     "lint:eslint": "eslint .",
     "lint:format": "eslint --fix $FILES",
     "test": "echo \"Error: no test specified\" && exit 1",
