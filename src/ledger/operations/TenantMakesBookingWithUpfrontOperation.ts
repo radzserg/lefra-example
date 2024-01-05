@@ -43,11 +43,11 @@ export class TenantMakesBookingOperationWithUpfront
           credit(
             account('OWNERS_ACCOUNTS_PAYABLES_LOCKED', tenantUserId),
             lockedAmount,
-          ),
+          ).mayHaveZero(),
           credit(
             account('OWNERS_ACCOUNTS_PAYABLES', tenantUserId),
             upfrontPaymentAmount,
-          ),
+          ).mayHaveZero(),
         ],
         'Tenant Payment Received and Held in CURRENT_ASSETS_STRIPE_PLATFORM_USA for Owner',
       ),

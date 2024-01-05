@@ -5132,7 +5132,7 @@ packages:
     dev: false
 
   file:../lefra-1.0.0.tgz:
-    resolution: {integrity: sha512-VAXQlkR8H6IFGEZ54/TQ+aN7N7qnBphQaLSHSKbOwqv6RVvniCLHDSYv5IyXChRukbnVMvWdH7+24hEW47BYfg==, tarball: file:../lefra-1.0.0.tgz}
+    resolution: {integrity: sha512-lQYKKfugffiGpEopQas1iFwURA54z5cveMsZ8HVSjGYxPIvUG9xWWOtfHBtePrOegGmBXb+QNxcsyBTv7LTlew==, tarball: file:../lefra-1.0.0.tgz}
     name: lefra
     version: 1.0.0
     hasBin: true

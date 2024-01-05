@@ -9,7 +9,7 @@ import {
   Ledger,
   ledgerAccountsRefBuilder,
   PostgresLedgerStorage,
-  TransactionFlowRenderer,
+  // TransactionFlowRenderer,
 } from 'lefra';
 
 setTimeout(async () => {
@@ -47,20 +47,20 @@ setTimeout(async () => {
       }),
     );
 
-    const transaction = await new TenantMakesBookingOperationWithUpfront({
-      bookingTargetAmount: usd(100),
-      lockedAmount: usd(70),
-      paymentProcessingFee: usd(3.3),
-      tenantUserId: 1,
-      upfrontPaymentAmount: usd(30),
-    }).createTransaction();
+    // const transaction = await new TenantMakesBookingOperationWithUpfront({
+    //   bookingTargetAmount: usd(100),
+    //   lockedAmount: usd(70),
+    //   paymentProcessingFee: usd(3.3),
+    //   tenantUserId: 1,
+    //   upfrontPaymentAmount: usd(30),
+    // }).createTransaction();
 
-    const renderer = new TransactionFlowRenderer();
-    console.log(
-      renderer.render(transaction, {
-        showFinalBalances: true,
-      }),
-    );
+    // const renderer = new TransactionFlowRenderer();
+    // console.log(
+    //   renderer.render(transaction, {
+    //     showFinalBalances: true,
+    //   }),
+    // );
 
     const lockedBalance = await ledger.fetchAccountBalance(
       account('OWNERS_ACCOUNTS_PAYABLES_LOCKED', 1),
