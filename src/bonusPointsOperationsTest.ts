@@ -3,12 +3,12 @@
 import { IssueBonusPoints } from './ledger/bonusPointsOperations/IssueBonusPointsOperations.js';
 import { ShareBonusPointsOperation } from './ledger/bonusPointsOperations/ShareBonusPointsOperation.js';
 import { FirecncBonusPointsLedger } from './ledger/FirecncBonusPointsLedger.js';
-import { FirecncPlatformUsdLedger } from './ledger/FirecncPlatformUsdLedger.js';
 import { points } from './ledger/points.js';
 import {
   Ledger,
   ledgerAccountsRefBuilder,
   PostgresLedgerStorage,
+  TransactionFlowRenderer,
   // TransactionFlowRenderer,
 } from 'lefra';
 
@@ -17,17 +17,17 @@ setTimeout(async () => {
   const storage = new PostgresLedgerStorage(process.env.LFR_DATABASE_URL!);
   const ledger = new Ledger(storage);
   try {
-    // const transaction = await new IssueBonusPoints({
-    //   adminUserId: 1,
-    //   amount: points(100),
-    //   userId: 23,
-    // }).createTransaction();
-    // const renderer = new TransactionFlowRenderer();
-    // console.log(
-    //   renderer.render(transaction, {
-    //     showFinalBalances: true,
-    //   }),
-    // );
+    const transaction = await new IssueBonusPoints({
+      adminUserId: 1,
+      amount: points(100),
+      userId: 23,
+    }).createTransaction();
+    const renderer = new TransactionFlowRenderer();
+    console.log(
+      renderer.render(transaction, {
+        showFinalBalances: true,
+      }),
+    );
 
     await ledger.record(
       new IssueBonusPoints({
@@ -45,7 +45,7 @@ setTimeout(async () => {
 
     await ledger.record(
       new ShareBonusPointsOperation({
-        amount: points(20),
+        amount: points(20.6),
         providerUserId: 23,
         receiverUserId: 42,
       }),

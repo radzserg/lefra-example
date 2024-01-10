@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lefra": "file:/Users/radzserg/projects/lefra-1.0.0.tgz",
+    "lefra": "^0.0.1",
     "slonik": "^37.2.0",
     "slonik-interceptor-field-name-transformation": "^1.6.5",
     "zod": "^3.22.4"

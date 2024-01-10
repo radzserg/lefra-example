@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   lefra:
-    specifier: file:/Users/radzserg/projects/lefra-1.0.0.tgz
-    version: file:../lefra-1.0.0.tgz
+    specifier: ^0.0.1
+    version: 0.0.1
   slonik:
     specifier: ^37.2.0
     version: 37.2.0(zod@3.22.4)
@@ -3516,6 +3516,19 @@ packages:
       language-subtag-registry: 0.3.22
     dev: true
 
+  /lefra@0.0.1:
+    resolution: {integrity: sha512-rNaRISxOo1QQNovNZDtsFZ0yzbFzgDcV6kVqyRZJsurKb58oylLv68QbmzC6HwqAFQomCUeatfh5bAaVwQtFlg==}
+    hasBin: true
+    dependencies:
+      bignumber.js: 9.1.2
+      slonik: 37.2.0(zod@3.22.4)
+      slonik-interceptor-field-name-transformation: 1.6.5(slonik@37.2.0)
+      yargs: 17.7.2
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - pg-native
+    dev: false
+
   /levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -4919,11 +4932,6 @@ packages:
       which-typed-array: 1.1.13
     dev: true
 
-  /uuid@9.0.1:
-    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
-    hasBin: true
-    dev: false
-
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
     dependencies:
@@ -5129,20 +5137,4 @@ packages:
 
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
-    dev: false
-
-  file:../lefra-1.0.0.tgz:
-    resolution: {integrity: sha512-5FswVExMXa+dgyzhJCUU1JH7SKm0U5eff7wn50A9rhXBT5MpUSDTGN8j5yHk/5CGUHotG4jw3zczOB6XBXZjsg==, tarball: file:../lefra-1.0.0.tgz}
-    name: lefra
-    version: 1.0.0
-    hasBin: true
-    dependencies:
-      bignumber.js: 9.1.2
-      slonik: 37.2.0(zod@3.22.4)
-      slonik-interceptor-field-name-transformation: 1.6.5(slonik@37.2.0)
-      uuid: 9.0.1
-      yargs: 17.7.2
-      zod: 3.22.4
-    transitivePeerDependencies:
-      - pg-native
     dev: false
